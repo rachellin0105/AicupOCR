@@ -3,9 +3,7 @@
 - 將定位model與字串辨識model合起來，使得使用者直接輸入一張或多張圖片，則得圖片繁體中文字位置與內容。(佔限繁體中文)
 - 定位模型使用 [DB github code](https://github.com/MhLiao/DB)
 - 辨識模型使用 [CRNN github code](https://github.com/clovaai/deep-text-recognition-benchmark) 
-
-## 未公開pretrained model 下載
-[Downloads from google drive](https://drive.google.com/file/d/1J8C2RJpHOV0mnB7h8SR6Le0e5k7hRHay/view?usp=sharing)
+- 將下載的 dir 解壓縮後放入root 資料夾
 ## Run
 ~~~bash= python!
 CUDA_VISIBLE_DEVICES=1 python aicupOCR.py --rgb --output_file_name name/of/result/txt --result_dir result --image_dir_path ./path/to/image/directory
