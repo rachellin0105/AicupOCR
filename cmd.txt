@@ -1,0 +1,2 @@
+CUDA_VISIBLE_DEVICES=1 python aicupOCR.py --rgb --output_file_name normalCase.txt --result_dir text_new_version --image_dir_path ./Task2_public_test/hard/img --threshold_crnn 0.3 --visualize
+CUDA_VISIBLE_DEVICES=1 python aicupOCR.py --rgb --aicup2_file ./Task2_public_test/hard/Task2_Coordinate_RELEASE_fake_hard.txt --output_file_name res_hard_aicup2_thresh03.txt --result_dir text_new_version --image_dir_path ./Task2_public_test/hard/img --threshold_crnn 0.3

@@ -1,0 +1,45 @@
+import:
+    - 'config_file/base.yaml'
+package:
+    - 'DB.decoders.seg_detector_loss'
+define:
+  - name: train_data
+    # class: ImageDataset
+    # data_dir:
+        # - './datasets/AICUP_1/'
+    # data_list:
+        # - './datasets/AICUP_1/train_list.txt'
+    processes:
+        - class: AugmentDetectionData
+          augmenter_args:
+              - ['Fliplr', 0.5]
+              - {'cls': 'Affine', 'rotate': [-10, 10]}
+              - ['Resize', {'width': 2048, 'height': 2048}]
+          only_resize: False
+          keep_ratio: False
+        - class: RandomCropData
+          size: [640, 640]
+          max_tries: 10
+        - class: MakeICDARData
+        - class: MakeSegDetectionData
+        - class: MakeBorderMap
+        - class: NormalizeImage
+        - class: FilterKeys
+          superfluous: ['polygons', 'filename', 'shape', 'ignore_tags', 'is_training']
+
+  - name: validate_data
+    # class: ImageDataset
+    # data_dir:
+    #     - './datasets/AICUP_1'
+    # data_list:
+    #     - './datasets/AICUP_1/test_list.txt'
+    processes:
+        - class: AugmentDetectionData
+          augmenter_args:
+              #- ['Resize', {'width': 2.0, 'height': 2.0}]
+              - ['Resize', {'width': 2048, 'height': 2048}]
+          only_resize: true
+          keep_ratio: False
+        - class: MakeICDARData
+        - class: MakeSegDetectionData
+        - class: NormalizeImage

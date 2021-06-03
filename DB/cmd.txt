@@ -1,0 +1,3 @@
+ CUDA_VISIBLE_DEVICES=0 python demo.py experiments/seg_detector/AICUP_resnet50_deform_thre.yaml \
+ --resume model/DB_aicup1_final --image_path ../image \
+ --box_thresh 0.5 --visualize

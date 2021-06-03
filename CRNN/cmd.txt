@@ -1,0 +1,4 @@
+CUDA_VISIBLE_DEVICES=0 python3 demo.py \
+--FeatureExtraction ResNet --SequenceModeling BiLSTM --Prediction CTC --Transformation TPS \
+--image_folder ../image --rgb \
+--saved_model model/without_dataaug_ch.pth
