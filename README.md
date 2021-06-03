@@ -4,8 +4,9 @@
 - 定位模型使用 [DB github code](https://github.com/MhLiao/DB)
 - 辨識模型使用 [CRNN github code](https://github.com/clovaai/deep-text-recognition-benchmark) 
 ## Start
-- 將model 資料夾放入root  資料夾中
+- 將pretrain model directory 放入root  資料夾中
 - 用aicup.tar 建立新的docker image 和 container
+> pretrain model directory and aicup.tar 暫不公開
 ## Run
 ~~~bash= python!
 CUDA_VISIBLE_DEVICES=1 python aicupOCR.py --rgb --output_file_name name/of/result/txt --result_dir result --image_dir_path ./path/to/image/directory
