@@ -18,10 +18,10 @@ CUDA_VISIBLE_DEVICES=1 python aicupOCR.py --rgb --output_file_name name/of/resul
 - `--visualize`: 是否需要visualize
 - visualization output will generate in result_dir/img
 - output_file_name 將會產生再 result_dir 中
-### 支援AICUP2
+### 支援僅跑CRNN
 - 加上 aicup2_file 就行，沒加就會跑 Detection
 ~~~bash= python!
 CUDA_VISIBLE_DEVICES=1 python aicupOCR.py --rgb --aicup2_file path/to/GT/file
 ~~~
 - aicup2_file 
-    - EX: ./AdvancedComp_public_test/easy/coordinates_easy.txt
+    - EX: ./img/coordinates.txt
