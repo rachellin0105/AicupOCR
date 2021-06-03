@@ -7,7 +7,7 @@
 - 將pretrain model directory 放入root  資料夾中
 - 用aicup.tar 建立新的docker image 和 container
 - dic_ch.txt 放在CRNN 資料夾中
-> pretrain model directory and aicup.tar 暫不公開
+> pretrain model directory , aicup.tar , dic_ch.txt 暫不公開
 ## Run
 ~~~bash= python!
 CUDA_VISIBLE_DEVICES=1 python aicupOCR.py --rgb --output_file_name name/of/result/txt --result_dir result --image_dir_path ./path/to/image/directory
