@@ -6,6 +6,7 @@
 ## Start
 - 將pretrain model directory 放入root  資料夾中
 - 用aicup.tar 建立新的docker image 和 container
+- dic_ch.txt 放在CRNN 資料夾中
 > pretrain model directory and aicup.tar 暫不公開
 ## Run
 ~~~bash= python!
